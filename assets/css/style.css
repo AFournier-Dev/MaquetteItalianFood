@@ -1,4 +1,422 @@
-.AboutUs{
-    background-color: #766d4a;
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS DEBUT DU CSS */
+
+/*REGLAGE BOX SIZING A BORDER BOX*/
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+/*NAVIGATION*/
+
+.header-nav{
+    display: flex;
+    height: 218.4px;   
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #ce9744 ;
+    justify-content: space-between;
+    
     
 }
+.logo{
+    display: flex;
+    height: 300.0px;
+    align-items: center;
+    height: 218.4px;
+    padding-left: 2%;
+    
+}
+
+.header-ul{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 60%;
+    font-size: 2.5em;
+    justify-content: space-around;
+}
+/*
+GRID
+*/
+
+
+#header{
+    display: grid;
+    grid-template-areas: 
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . h1 h1 h1 h1 h1 . . . . . . "
+        " . h1 h1 h1 h1 h1 . . . . . . "
+        " . h1 h1 h1 h1 h1 . . . booknow booknow . "
+        " . . . . . . . . . . . . "        
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . ";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 8%, rgba(201,201,201,0.3561799719887955) 83%, rgba(255,255,255,0) 100%), url(../pictures/fondgroup1.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0)),
+        url('../img/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;*/
+    
+    height: 100vh;
+    width: 100%;
+}
+#header > h1{
+    grid-area: h1;
+    
+}
+.h1{
+    font-size: 7em;
+    color: #ffffff;
+}
+.h1span{
+    font-size: .5em;
+}
+#header > .booknow{
+    grid-area: booknow;
+}
+.booknow{   
+    border-color: rgba(0,0,0,0);
+    background-color: #ce9744;
+    font-size:2.5em;
+    color: #ffffff;
+}
+/*GROUP2*/
+
+#group2{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+        " . . . . . . "
+        " . . . . . . "
+        " . . h2gp2 h2gp2 . . "
+        " . . pgp2 pgp2 . . "
+        " . . . . . . ";
+    background-color: #ce9744 ;
+    height: 100vh;
+    width: 100%;
+
+    background-image: url(../pictures/plat1Group2.png);
+    background-repeat: no-repeat;
+    background-position-x: -50%;
+    background-position-y: center;
+    background-size: 55%; 
+}
+#group2 > .h2gp2{
+    grid-area: h2gp2;
+}
+.h2gp2{
+    font-size: 5em;
+    color: #ffffff;
+    align-items: flex-end;
+    align-self: end;
+    margin-bottom: .2em;
+}
+#group2 > .pgp2{
+    grid-area: pgp2;
+}
+.pgp2{
+    font-size: 1.5em;
+    color: #ffffff;
+}
+/*GROUP3*/
+
+#group3{
+    display: grid;
+    grid-template-areas: 
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . h2gp3 h2gp3 h2gp3 h2gp3 h2gp3 . "
+        " . . . . . . pgp3 pgp3 pgp3 pgp3 pgp3 . "
+        " . . . . . . pgp3 pgp3 pgp3 pgp3 pgp3 . "
+        " . . . . . . contactus contactus . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . ";
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    */  
+    background-color: #766d4a;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../pictures/Group3.jpg);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position-x: 15%;
+    background-position-y: center;      
+}
+#group3 > .h2gp3{
+    grid-area: h2gp3;
+}
+#group3 > .pgp3{
+    grid-area: pgp3;
+}
+#group3 > .contactus{
+    grid-area: contactus;
+}
+.h2gp3{
+    font-size: 5em;
+    color: #ffffff;
+    align-items: flex-end;
+    align-self: end;
+    margin-bottom: .2em;
+    align-self: end;
+}
+.pgp3{
+    font-size: 1.5em;
+    color: #ffffff;
+    align-self: center;
+}
+.contactus{   
+    border-color: rgba(0,0,0,0);
+    background-color: #ce9744;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+/*GROUP4*/
+
+#group4{
+    display: grid;
+    grid-template-areas: 
+        " . . . . . . . . . . . . "        
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . h2gp4 h2gp4 h2gp4 h2gp4 . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "        
+        " . . pic1gp4 pic1gp4 . pic2gp4 pic2gp4 . pic3gp4 pic3gp4 . . "
+        " . . pic1gp4 pic1gp4 . pic2gp4 pic2gp4 . pic3gp4 pic3gp4 . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . p1gp4 p1gp4 . p2gp4 p2gp4 . p3gp4 p3gp4 . . "
+        " . . . . . . . . . . . . ";
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    */  
+    background-color: #ce9744;
+    height: 100vh;
+    width: 100%;    
+}
+#group4 > .h2gp4{
+    grid-area: h2gp4;
+}
+#group4 > .p1gp4{
+    grid-area: p1gp4;
+}
+#group4 > .p2gp4{
+    grid-area: p2gp4;
+}
+#group4 > .p3gp4{
+    grid-area: p3gp4;
+}
+#group4 > .pic1gp4{
+    grid-area: pic1gp4;
+}
+#group4 > .pic2gp4{
+    grid-area: pic2gp4;
+}
+#group4 > .pic3gp4{
+    grid-area: pic3gp4;
+}
+.h2gp4{
+    font-size: 5em;
+    color: #ffffff;
+    align-items: center;
+    align-self: end;
+    align-self: end;
+}
+.p1gp4 {
+    font-size: 1.5em;
+    color: #ffffff;
+    align-self: center;
+}
+.p2gp4 {
+    font-size: 1.5em;
+    color: #ffffff;
+    align-self: center;
+}
+.p3gp4 {
+    font-size: 1.5em;
+    color: #ffffff;
+    align-self: center;
+}
+
+
+#group5{
+    display: grid;
+    grid-template-areas: 
+        " . . . . . . . . . . . . "        
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+      
+        " . . . . . . . . . . . . "     
+        " . h2gp5 h2gp5 h2gp5 h2gp5 h2gp5 h2gp5 . . . . . "
+        " . h3gp5 h3gp5 h3gp5 h3gp5 h3gp5 h3gp5 . . . . . " 
+        " . . . . . . . . . . . . "  
+        " . booknow booknow booknow booknow . . . . . . . "        
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . "
+        " . . . . . . . . . . . . ";
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    */  
+    background-color: #ce9744;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../pictures/plat2Group5.png);
+    background-repeat: no-repeat;
+    background-position-x: 150%;
+    background-position-y: center;
+    background-size: 55%; 
+    
+}
+
+#group5 > .h2gp5{
+    grid-area: h2gp5;
+}
+#group5 > .h3gp5{
+    grid-area: h3gp5;
+}
+#group5 > .booknow{
+    grid-area: booknow;
+}
+
+.h2gp5{
+    font-size: 6em;
+    color: #ffffff;
+    align-items: center;
+    align-self: end;
+}
+.h3gp5{
+    font-size: 1.8em;
+    color: #ffffff;
+    align-items: center;
+    align-self: end;
+    
+}
+
+.booknow{   
+    border-color: rgba(0,0,0,0);
+    background-color: #ffffff;
+    font-size: 4em;
+    color: #776d4a;
+    border-radius: 10px;
+    
+    /*align-self: stretch;
+    justify-self: stretch;*/
+
+}
+
+.group6{
+    height: 100vh;
+    background-image: url(../pictures/fdgp6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.group7{
+    height: 100vh;
+    background-color: #ce9744;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+blockquote{    
+    font-size: 6em;
+    margin-bottom: 0.5;
+    color: #ffffff;
+}
+
+.vincentvangogh{
+    font-size: 6em;
+    margin-top: 0.5em;
+    color: #ffffff;
+}
+
+
+/*
+#mapid {
+    height: 100vh; 
+}
+*/
