@@ -1,0 +1,19 @@
+@font-face {
+  font-family: '';
+  src: ;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AnticDidone-Regular';
+  src: url('AnticDidone-Regular.eot');
+  src: url('AnticDidone-Regular.eot?#iefix') format('embedded-opentype'),
+       url('AnticDidone-Regular.svg#AnticDidone-Regular') format('svg'),
+       url('AnticDidone-Regular.ttf') format('truetype'),
+       url('AnticDidone-Regular.woff') format('woff'),
+       url('AnticDidone-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

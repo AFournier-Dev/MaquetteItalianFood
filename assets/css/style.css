@@ -59,6 +59,38 @@ a, a:hover, a:visited, a:active
 	text-decoration:none;
 }
 
+/*POLICE*/
+@font-face {
+    font-family: 'AnticDidone-Regular';
+    src: url(../police/AnticDidone/AnticDidone-Regular.eot);
+    src: url(../police/AnticDidone/AnticDidone-Regular.eot?#iefix) format('embedded-opentype'),
+         url(../police/AnticDidone/AnticDidone-Regular.svg#AnticDidone-Regular) format('svg'),
+         url(../police/AnticDidone/AnticDidone-Regular.ttf) format('truetype'),
+         url(../police/AnticDidone/AnticDidone-Regular.woff) format('woff'),
+         url(../police/AnticDidone/AnticDidone-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTStd-Book';
+    src: url(../Avenir/police/LTStd-Book.eot);
+    src: url(../Avenir/police/AvenirLTStd-Book.eot?#iefix) format('embedded-opentype'),
+         url(../Avenir/police/AvenirLTStd-Book.svg#AvenirLTStd-Book) format('svg'),
+         url(../Avenir/police/AvenirLTStd-Book.ttf) format('truetype'),
+         url(../Avenir/police/AvenirLTStd-Book.woff) format('woff'),
+         url(../Avenir/police/AvenirLTStd-Book.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'AnticDidone-Regular', serif;
+}
+
+p, blockquote{
+    font-family: AvenirLTStd-Book, sans-serif;
+}
 /*NAVIGATION*/
 
 .header-nav{
@@ -91,7 +123,7 @@ a, a:hover, a:visited, a:active
     font-size: 2.5em;
     justify-content: space-around;
 }
-
+/*
 @media only screen and (max-width: 900px){
     .header-ul{
         font-size: 2em;
@@ -108,7 +140,7 @@ a, a:hover, a:visited, a:active
        
     }
 }
-
+*/
 
 
 
@@ -174,7 +206,7 @@ GRID
     color: #ffffff;
 }
 
-
+/*
 
 @media only screen and (max-width: 900px){
     #header{
@@ -188,6 +220,7 @@ GRID
     }
 }
 
+*/
 /*GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 GROUP2 */
 
 #group2{
@@ -235,11 +268,12 @@ GRID
         " . . . . . . . . . . . . "
         " . . . . . . . . . . . . "
         " . . . . . . . . . . . . "
-        " . . . . . . . . . . . . "
+        
         " . . . . . . h2gp3 h2gp3 h2gp3 h2gp3 h2gp3 . "
         " . . . . . . pgp3 pgp3 pgp3 pgp3 pgp3 . "
         " . . . . . . pgp3 pgp3 pgp3 pgp3 pgp3 . "
         " . . . . . . contactus contactus . . . . "
+        " . . . . . . . . . . . . "
         " . . . . . . . . . . . . "
         " . . . . . . . . . . . . "
         " . . . . . . . . . . . . ";
@@ -269,12 +303,12 @@ GRID
     grid-area: contactus;
 }
 .h2gp3{
-    font-size: 5em;
+    font-size: 4em;
     color: #ffffff;
     align-items: flex-end;
     align-self: end;
     margin-bottom: .2em;
-    align-self: end;
+    
 }
 .pgp3{
     font-size: 1.5em;
@@ -286,6 +320,7 @@ GRID
     background-color: #ce9744;
     font-size: 2.5em;
     color: #ffffff;
+    align-self: end;
 }
 
 /*GROUP4*/
@@ -338,28 +373,87 @@ GRID
     grid-area: pic3gp4;
 }
 .h2gp4{
-    font-size: 4.7em;
+    font-size: 4em;
     color: #ffffff;
     align-items: center;
-    align-self: end;
     align-self: end;
 }
 .p1gp4 {
     font-size: 1.5em;
     color: #ffffff;
-    align-self: center;
+    align-self: end;
+    justify-self: end;
 }
 .p2gp4 {
+    padding-left: 4vw;
     font-size: 1.5em;
     color: #ffffff;
-    align-self: center;
+    align-self: end;
+    justify-self: center;
 }
 .p3gp4 {
     font-size: 1.5em;
     color: #ffffff;
-    align-self: center;
+    align-self: end;
+    justify-self: end;
 }
 
+@media only screen and (max-width: 1600px){       
+    .h2gp4{
+font-size: 3em;
+    }
+} 
+@media only screen and (max-width: 1400px){
+    #group4{
+        display: grid;
+        grid-template-areas: 
+        " h2gp4 "
+        " . "        
+        " . "
+        " pic1gp4 "
+        " p1gp4 "
+        " . "
+        " pic2gp4 "
+        " p2gp4 "
+        " . "
+        " pic3gp4 "
+        " p3gp4 "
+        " . ";
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        height: 115vh;
+    
+        
+        align-items: center;
+        justify-items: center;
+    }
+    
+
+    .h2gp4, .p1gp4, .p2gp4, .p3gp4{
+        justify-self: center;
+        align-self: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+}
+
+
+/*
+@media only screen and (max-width: 1400px){       
+    .h2gp4{
+    font-size: 3em;
+    } 
+    #group4{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+    justify-content: center;
+    }   
+} 
+*/
 
 #group5{
     display: grid;
@@ -372,7 +466,7 @@ GRID
         " . h2gp5 h2gp5 h2gp5 h2gp5 h2gp5 h2gp5 . . . . . "
         " . h3gp5 h3gp5 h3gp5 h3gp5 h3gp5 h3gp5 . . . . . " 
         " . . . . . . . . . . . . "  
-        " . booknow2 booknow2 booknow2 booknow2 . . . . . . . "        
+        " . booknow2 booknow2 booknow2 booknow2 booknow2 . . . . . . "        
         " . . . . . . . . . . . . "
         " . . . . . . . . . . . . "
         " . . . . . . . . . . . . "
@@ -409,13 +503,15 @@ GRID
     font-size: 6em;
     color: #ffffff;
     align-items: center;
-    align-self: end;
+    align-self: center;
+    padding-left: 0.1em;
 }
 .h3gp5{
-    font-size: 1.8em;
+    font-size: 2.1em;
     color: #ffffff;
     align-items: center;
-    align-self: end;
+    align-self: center;
+    padding-left: 0.15em;
     
 }
 
@@ -426,17 +522,95 @@ GRID
     color: #776d4a;
     border-radius: 10px;
     
+    
     /*align-self: stretch;
     justify-self: stretch;*/
 
+}
+@media only screen and (max-width: 1350px){       
+    .h2gp5{
+font-size: 5em;
+    }    
+    .h3gp5{
+font-size: 1.75em;
+    }
+    .booknow2{
+        font-size: 3.33em;
+    }
+}
+@media only screen and (max-width: 1150px){       
+    .h2gp5{
+font-size: 4.2em;
+    }    
+    .h3gp5{
+font-size: 1.45em;
+    }
+    .booknow2{
+        font-size: 2.775em;
+    }
+}
+@media only screen and (max-width: 950px){       
+    .h2gp5{
+font-size: 3.5em;
+    }    
+    .h3gp5{
+font-size: 1.21em;
+    }
+    .booknow2{
+        font-size: 2.3125em;
+    }
+}
+@media only screen and (max-width: 800px){       
+    .h2gp5{
+font-size: 2.9em;
+    }    
+    .h3gp5{
+font-size: 1.0em;
+    }
+    .booknow2{
+        font-size: 1.927em;
+    }
+}
+@media only screen and (max-width: 700px){       
+    .h2gp5{
+font-size: 2.42em;
+    }    
+    .h3gp5{
+font-size: 0.83em;
+    }
+    .booknow2{
+        font-size: 1.606em;
+    }
+}
+@media only screen and (max-width: 600px){       
+    .h2gp5{
+font-size: 2em;
+    }    
+    .h3gp5{
+font-size: 0.7em;
+    }
+    .booknow2{
+        font-size: 1.338em;
+    }
 }
 
 .group6{
     height: 100vh;
     background-image: url(../pictures/fdgp6.jpg);
+    
     background-repeat: no-repeat;
     background-size: cover; 
+    /*background-attachment: fixed;
+    background-size: contain;
+    */ 
 }
+@media only screen and (max-width: 1000px){
+    .group6{
+        background-position: 50% 75%;
+    }    
+}
+
+
 
 .group7{
     height: 100vh;
@@ -448,112 +622,60 @@ GRID
 }
 
 blockquote{    
-    font-size: 6em;
+    font-size: 5em;
     margin-bottom: 0.5;
     color: #ffffff;
 }
 
 .vincentvangogh{
-    font-size: 6em;
+    font-size: 5em;
     margin-top: 0.5em;
     color: #ffffff;
 }
 
 
-/*
-#mapid {
-    height: 100vh; 
-}
-*/
 
-/*#group8{
-    display: grid;
-    grid-template-areas: 
-        " . . . . . . . . . . . . " 
-        " . . . . . . . . . . . . "
-        " . . . . . . . . . . . . "
-        " . . . . . . . . . . . . "
-        " . . . . . . . . . . . . " 
-        " . . . . . . . . . . . . "
-        " . h2gp8 h2gp8 . . . . . . . . . "       
-       
-        " . h3gp8 h3gp8 . . . . . . . . . "       
-        " . h4gp8 h4gp8 . . . . . . . . . "
-        " . h5gp8 h5gp8 . . . . . . . . . "
-       
-        " . . . . . . . . . . . . "
-        " . . . . . . . . . . . mapid ";
-    
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    
-    
-    
-    
-    
-    justify-items: center;
-    height: 100vh;
-    width: 100%;
-    
-    
+@media only screen and (max-width: 1400px){
+    blockquote, .vincentvangogh{
+        font-size: 4.5em;
+    }  
 }
 
-#group8 > .h2gp8{
-    grid-area: h2gp8;
-    
+@media only screen and (max-width: 1300px){
+    blockquote, .vincentvangogh{
+        font-size: 4em;
+    }        
+} 
+@media only screen and (max-width: 1200px){
+    blockquote, .vincentvangogh{
+        font-size: 3.5em;
+    }        
+}  
+@media only screen and (max-width: 1100px){
+    blockquote, .vincentvangogh{
+        font-size: 3em;
+    }        
+} 
+@media only screen and (max-width: 1000px){
+    blockquote, .vincentvangogh{
+        font-size: 2.5em;
+    }        
+}
+@media only screen and (max-width: 700px){
+    blockquote, .vincentvangogh{
+        font-size: 2em;
+    }        
+}
+@media only screen and (max-width: 700px){
+    blockquote, .vincentvangogh{
+        font-size: 1.5em;
+    }        
 }
 
-#group8 > .h3gp8{
-    grid-area: h3gp8;
-    align-self: end;
-}
-
-#group8 > .h4gp8{
-    grid-area: h4gp8;
-    align-self: end;
-}
-#group8 > .h5gp8{
-    grid-area: h5gp8;
-    align-self: start;
-}
-
-.h2gp8{
-    font-size: 3em;
-    color: #ffffff;   
-}
-
-.h3gp8{
-    font-size: 1.8em;
-    color: #ffffff;
-}
-
-.h4gp8{
-    font-size: 1.6em;
-    color: #ffffff;
-    justify-content: center;
-    align-items: center;
-}
-.h5gp8{
-    font-size: 1.8em;
-    color: #ffffff;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#group8 > #mapid { 
-    grid-area: map;
-}
-
-*/
 #mapid{
     height: 100vh;
     width: 100%;
     z-index: 200;
-
 }
 
 .layout{
@@ -608,7 +730,41 @@ blockquote{
     justify-content: center;
     align-items: center;
 }
-
+@media only screen and (max-width: 1400px){
+    .layout{
+        width: 45%;        
+    }
+}
+@media only screen and (max-width: 1200px){
+    .layout{
+        width: 50%;        
+    }
+}
+@media only screen and (max-width: 1100px){
+    .layout{
+        width: 60%;        
+    }
+}
+@media only screen and (max-width: 1000px){
+    .layout{
+        width: 70%;        
+    }
+}
+@media only screen and (max-width: 900px){
+    .layout{
+        width: 80%;        
+    }
+}
+@media only screen and (max-width: 800px){
+    .layout{
+        width: 90%;        
+    }
+}
+@media only screen and (max-width: 700px){
+    .layout{
+        width: 100%;        
+    }
+}
 
 #footer{
    
@@ -626,18 +782,19 @@ blockquote{
         " . . . . . . . goalssection1 . goalssection2 . . "        
                
         " . . . . insta facebook twitter comment . . . . "
-        " lebas lebas lebas lebas lebas lebas lebas lebas lebas lebas lebas lebas ";
+        " . . . . . . . . . . . . " ;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     
     
-    background-image: url(../pictures/backgroundfooter.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+   
 
-    
-    
     height: 100vh;
+    /*background-image: url(../pictures/backgroundfooter.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    */
+    
     width: 100%;
 }
 
@@ -718,31 +875,72 @@ blockquote{
     text-transform: none;
     font-size: 1.2em;
     color: #ffffff;
+    align-self: start;
     
 }
 
 .insta{
     color: #ffffff;
-    height: 50px;
-    width: 50px;
+    justify-self: center;
+    
 }
 .facebook{
     color: #ffffff;
-    height: 50px;
-    width: 50px;
+    justify-self: center;
+   
 }
 .twitter{
     color: #ffffff;
-    height: 50px;
-    width: 50px;
+    justify-self: center;
+   
 }
 .comment{
     color: #ffffff;
-    height: 50px;
-    width: 50px;
-}
-.lebas{
-    color: #766e4a;
+    justify-self: center;
+   
 }
 
 
+
+
+.footer {    
+    background:
+        linear-gradient(
+        to bottom,
+        #766e4a 0, 
+        #766e4a 13%,
+        #ce9744 13%, 
+        #ce9744 87%, 
+        #766e4a 87%, 
+        #766e4a )no-repeat;
+        height: 100vh;    
+} 
+@media only screen and (max-width: 1000px){
+    .ploremfooter{
+        font-size: 1.35em;
+        padding-top: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 840px){
+    .ploremfooter{
+        font-size: 1.1em;
+        padding-top: 2.25em;
+    }
+    .comment{        
+        justify-self: start;
+    }
+    .insta{        
+        justify-self: end;        
+    }
+}
+
+
+
+  /*
+@media only screen and (max-width: 900px){
+    .header-ul{
+        font-size: 2em;
+    }
+}
+*/
