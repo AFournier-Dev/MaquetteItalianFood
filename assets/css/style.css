@@ -149,7 +149,140 @@ p, blockquote{
 /*
 GRID
 */
+@media only screen and (max-width: 950px){
+    #icon-burger{
+        height: 25px;
+        width: 25px;
+        filter: grayscale();
+    }
 
+
+    #menuToggle{
+        display: flexbox;
+        position: fixed;
+        
+
+        top: 50px;
+        right: 50px;
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    #menuToggle input{
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        right: -5px;
+        
+        cursor: pointer;
+        
+        opacity: 0; /* hide this */
+        /*  z-index: 2;  and place it over the hamburger */
+        
+        -webkit-touch-callout: none;
+    }
+
+    /*
+    * Just a quick hamburger
+    */
+    #menuToggle span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        
+        background: #cdcdcd;
+        border-radius: 3px;
+        
+        z-index: 1;
+        
+        transform-origin: 4px 0px;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+
+    #menuToggle span:nth-last-child(3)
+    {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(3)
+    {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    #menuToggle.open span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    #menuToggle.open span:nth-last-child(2)
+    {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    #menuToggle.open span:nth-last-child(1){
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top right of the screen
+    */
+    #menu{
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        
+        background: rgba(237, 237, 237, 0.2);
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menu li
+    {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*
+    * And let's slide it in from the right
+    */
+    #menuToggle.open ul
+    {
+        transform: none;
+    }
+}
+
+/* FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU FIN MENU */
 
 #header{
     display: grid;
@@ -205,6 +338,40 @@ GRID
     font-size:2.5em;
     color: #ffffff;
 }
+@media only screen and (max-width: 1000px){   
+    #group2{
+        display: grid;
+        grid-template-areas: 
+        " . "
+        " . "        
+        " . "
+        " h1 "
+        " h1 "
+        " h1 "
+        " . "
+        " . "
+        " . "
+        " . "
+        " booknow "
+        " . ";
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        height: 100vh;
+        background-image: url(../pictures/plat1Group2.png);
+        background-repeat: no-repeat;
+        background-size: 55%;
+        background-position-x: 50%;
+        background-position-y :89%;   
+        align-items: center;
+        justify-items: center;
+    }@media only screen and (max-width: 1000px){       
+    .h1{
+font-size: 5em;
+    }    
+    .booknow{
+font-size: 1.25em;
+    }
+}
 
 /*
 
@@ -259,6 +426,59 @@ GRID
     font-size: 1.5em;
     color: #ffffff;
 }
+@media only screen and (max-width: 1350px){       
+    .h2gp2{
+font-size: 5em;
+    }    
+    .h3gp2{
+font-size: 1.75em;
+    }
+}
+@media only screen and (max-width: 1150px){       
+    .h2gp2{
+font-size: 4.2em;
+    }    
+    .h3gp2{
+font-size: 1.45em;
+    }
+}
+@media only screen and (max-width: 950px){       
+    .h2gp2{
+font-size: 3.5em;
+    }    
+    .h3gp2{
+font-size: 1.21em;
+    }
+}
+@media only screen and (max-width: 800px){   
+    #group2{
+        display: grid;
+        grid-template-areas: 
+        " h2gp2 "
+        " h2gp2 "        
+        " pgp2 "
+        " pgp2 "
+        " pgp2 "
+        " pgp2 "
+        " pgp2 "
+        " pgp2 "
+        " pgp2 "
+        " . "
+        " . "
+        " . ";
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        height: 100vh;
+        background-image: url(../pictures/plat1Group2.png);
+        background-repeat: no-repeat;
+        background-size: 55%;
+        background-position-x: 50%;
+        background-position-y :89%;   
+        align-items: center;
+        justify-items: center;
+    }
+
+
 /*GROUP3*/
 
 #group3{
@@ -321,6 +541,56 @@ GRID
     font-size: 2.5em;
     color: #ffffff;
     align-self: end;
+}
+@media only screen and (max-width: 1400px){       
+    .h2gp3{
+        font-size: 3em;
+    }    
+    .pgp3{
+        font-size: 1.125em;
+    }
+    .contactus{
+        font-size: 1.875em;
+    }
+@media only screen and (max-width: 1050px){       
+    .h2gp3{
+        font-size: 2.25em;
+    }    
+    .pgp3{
+        font-size: 0,84375em;
+    }
+    .contactus{
+        font-size: 1,40625em;
+    }
+
+@media only screen and (max-width: 750px){
+#group3{
+    display: grid;
+    grid-template-areas: 
+    " h2gp3 "
+    " h2gp3 "        
+    " . "
+    " pgp3 "
+    " pgp3 "
+    " pgp3 "
+    " . "
+    " contactus "
+    " . "
+    " . "
+    " . "
+    " . ";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    background-image: url(../pictures/Group3.jpg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position-x: 50%;
+    background-position-y :89%;      
+
+    
+    align-items: center;
+    justify-items: center;
 }
 
 /*GROUP4*/
